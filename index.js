@@ -10,6 +10,7 @@ document.getElementById('loginButton')
 
     if(mobileNumber===inputMobileNumber && pinNumber===inputPinNumber)
     {
+        // home page connect
         window.location.href="./home_page.html"
     }
     else
