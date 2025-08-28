@@ -46,26 +46,27 @@
             <img src="./assets/send1.png" alt="" class="mx-auto">
            <h2>Cashout</h2>
         </div>
-         <div class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
+         <div id="transfer-Money-btn" class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
             <img src="./assets/money1.png" alt="" class="mx-auto">
            <h2>Transfer Money</h2>
         </div>
-         <div class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
+         <div id="Get-Bonus-btn" class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
             <img src="./assets/bonus1.png" alt="" class="mx-auto">
            <h2>Get Bonus</h2>
         </div>
-         <div class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
+         <div id="pay-bill-btn" class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
             <img src="./assets/purse1.png" alt="" class="mx-auto">
            <h2>Pay Bill</h2>
         </div>
-         <div class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
+         <div id="transaction-history-btn" class="border-1 border-gray-200 bg-white text-center p-3 rounded-xl">
             <img src="./assets/transaction1.png" alt="" class="mx-auto">
            <h2>Transactions</h2>
         </div>
      </div>
       </div>
       <div class="for-all-section max-w-lg mx-auto mt-5">
-        <div id="add-Money" >
+         <!-- add money list -->
+        <div id="add-Money" class="form" style="display:none" >
             <h2 class="font-bold">Add Money</h2>
         <form action="" class="bg-white rounded-2xl p-5 mt-4 m-5">
             <div>
@@ -92,7 +93,8 @@
         <button class="btn bg-[#0874f2] mt-2 w-full rounded-xl" id="add-money-btn">Add Money</button>
         </form>
         </div>
-         <div id="Cash-Out" style="display:none" >
+        <!-- cash out list -->
+         <div id="Cash-Out" class="form" style="display:none" >
             <h2 class="font-bold">Cash Out</h2>
         <form action="" class="bg-white rounded-2xl p-5 mt-4 m-5">
         <div class="mt-3">
@@ -110,7 +112,71 @@
         <button class="btn bg-[#0874f2] mt-2 w-full rounded-xl" id="cash-out-money-btn">Withdraw Money</button>
         </form>
         </div>
-      </div>
+        <!-- transfer Money List -->
+          <div id="Transfer-Money" class="form" style="display:none" >
+            <h2 class="font-bold">Transfer Money</h2>
+        <form action="" class="bg-white rounded-2xl p-5 mt-4 m-5">
+        <div class="mt-3">
+           <label for="" class=" font-semibold">User Account Number</label><br>
+           <input type="text" id="user-account-number" placeholder="Enter 11 digit number" class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <div class="mt-3">
+           <label for="" class="mt-2 font-semibold">Amount</label><br>
+           <input type="text" id="send-money" placeholder="Enter amount to transfer" class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <div class="mt-3">
+           <label for="" class="mt-2 font-semibold">Pin Number</label><br>
+           <input type="text" id="pin-number-for-send-money" placeholder="Enter 4 digit pin number" class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <button class="btn bg-[#0874f2] mt-2 w-full rounded-xl" id="send-money-btn">Send Now</button>
+        </form>
+        </div>
+        <!-- Ger Bonus -->
+        <div id="Get-Bonous" class="form" style="display:none" >
+            <h2 class="font-bold">Get Bonus</h2>
+        <form action="" class="bg-white rounded-2xl p-5 mt-4 m-5">
+        <div class="mt-3">
+           <label for="" class="mt-2 font-semibold">Enter Bonus Coupon</label><br>
+           <input type="text" id="coupon-number" placeholder="Enter your coupon" class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <button class="btn bg-[#0874f2] mt-2 w-full rounded-xl" id="get-bonus-btn">Get Bonus</button>
+        </form>
+        </div> 
+        <!-- Pay Bill -->
+          <div id="pay-bill" class="form" style="display:none" >
+            <h2 class="font-bold">Pay Bill</h2>
+        <form action="" class="bg-white rounded-2xl p-5 mt-4 m-5">
+            <div>
+           <label for="" class="mt-2 font-semibold">Select To Pay</label><br>
+           <select id="bank-to-pay" class="select input mt-2 rounded-xl bg-[#f4f5f7] w-full">
+             <option disabled selected>Selet back</option>
+             <option>Dutch Bangla Bank</option>
+             <option>IFIC Bank</option>
+             <option>Islamic Bank</option>
+          </select>
+        </div>
+        <div class="mt-3">
+           <label for="" class=" font-semibold">Biller Account Number</label><br>
+           <input type="text" id="account-number-pay-bill" placeholder="Enter 11 digit account number" class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <div class="mt-3">
+           <label for="" class="mt-2 font-semibold">Amount to Pay</label><br>
+           <input type="text" id="add-money-to-pay" placeholder="add Amount to pay " class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <div class="mt-3">
+           <label for="" class="mt-2 font-semibold">Pin Number</label><br>
+           <input type="text" id="pin_number_to_pay" placeholder="Enter 4 digit pin number" class="input mt-2 rounded-xl bg-[#f4f5f7] w-full" />
+        </div>
+        <button class="btn bg-[#0874f2] mt-2 w-full rounded-xl" id="pay-bill-btn">Pay Now</button>
+        </form>
+        </div>
+        <!-- Transaction History -->
+         <div id="transcation-history" class="form" style="display:none">
+              <h2 class="font-bold">Transaction History</h2>
+              <div>
+                 <img src="" alt="">
+              </div>
+         </div>
       <!-- connect js -->
        <script src="./home_page.js"></script>
 </body>
